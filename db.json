@@ -1,11 +1,11 @@
 {
   "projects": [
     {
-      "name": "srg",
-      "budget": "454",
+      "name": "Projeto iplementação do React",
+      "budget": "2000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
       "cost": 0,
       "services": [],
@@ -13,14 +13,25 @@
     },
     {
       "name": "Projeto Jira",
-      "budget": "2000",
+      "budget": "1300",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 2
+    },
+    {
+      "name": "Projeto de atualizações",
+      "budget": "1800",
       "category": {
         "id": "3",
         "name": "Design"
       },
       "cost": 0,
       "services": [],
-      "id": 2
+      "id": 3
     }
   ],
   "categories": [
