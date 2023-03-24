@@ -1,5 +1,9 @@
 import styles from './Project.module.css'
 
+import Loading from '../layouts/Loading'
+import Container from '../layouts/Container'
+import ProjectForm from '../project/ProjectForm'
+
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
@@ -7,6 +11,7 @@ function Project() {
 
   const { id } = useParams()
   const [project, setProject] = useState([])
+  const [showProjectForm, setShowProjectForm] =useState(false)
 
   useEffect(() => {
 
@@ -23,11 +28,52 @@ function Project() {
     .catch(err => console.log(err))
   }, [id])
 
+  function toggleProjectForm() {
+    setShowProjectForm(!showProjectForm)
+  }
+
+  function editPost() {
+    
+  }
+
   return(
-    <div>
-      <p>{project.name}</p>
-      <p>{project.id}</p>
-    </div>
+    <>
+      {project.name ? (
+        <div className={styles.project_details}>
+          <Container customClass='column'>
+            <div className={styles.details_container}>
+              <h1>Projeto: {project.name}</h1>
+              <button className={styles.btn} onClick={toggleProjectForm}>
+                {!showProjectForm ? 'Editar projeto' : 'Fechar'}
+              </button>
+              {!showProjectForm ? (
+                <div className={styles.project_info}>
+                  <p>
+                    <span>Categoria:</span> {project.category.name}
+                  </p>
+                  <p>
+                    <span>Total do orçamento:</span> {project.budget}
+                  </p>
+                  <p>
+                    <span>Total utilizado:</span> {project.cost}
+                  </p>
+                </div>
+              ) : (
+                <div className={styles.project_info}>
+                  <ProjectForm 
+                    handleSubmit={editPost} 
+                    btnText='Concluir edição' 
+                    projectData={project}
+                  />
+                </div>
+              )}
+            </div>
+          </Container>
+        </div>
+      ) : (
+        <Loading/>
+      )}
+    </>
   )
 }
 
