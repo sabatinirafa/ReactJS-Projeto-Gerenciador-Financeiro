@@ -18,7 +18,7 @@
         "id": "4",
         "name": "Planejamento"
       },
-      "cost": 916,
+      "cost": 928,
       "services": [
         {
           "name": "çljlkjlk",
@@ -31,6 +31,12 @@
           "cost": "458",
           "description": "lçkçl",
           "id": "e12046d4-2610-4514-8f25-dec20dd84eb3"
+        },
+        {
+          "name": "lçkçlkç",
+          "cost": "12",
+          "description": "jkhkj",
+          "id": "cfcedc16-9591-4b2a-b22b-5a8bc4e92ea6"
         }
       ],
       "id": 2
