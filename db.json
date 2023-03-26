@@ -48,8 +48,15 @@
         "id": "3",
         "name": "Design"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 454,
+      "services": [
+        {
+          "name": "jhhk",
+          "cost": "454",
+          "description": "kklçl",
+          "id": "d94aa6ff-5b21-413d-8116-1849569e8a9c"
+        }
+      ],
       "id": 3
     }
   ],

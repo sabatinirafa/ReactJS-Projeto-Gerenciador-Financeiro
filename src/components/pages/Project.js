@@ -73,7 +73,31 @@ function Project() {
 
   }
 
-  function removeService() {
+  function removeService(id, cost) {
+
+    const servicesUpdated = project.services.filter(
+      (service) => service.id !== id
+    )
+
+    const projectUpdated = project
+
+    projectUpdated.services = servicesUpdated
+    projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
+
+    fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(projectUpdated)
+    })
+    .then(resp => resp.json())
+    .then(data => {
+      setProject(projectUpdated)
+      setServices(servicesUpdated)
+      setMessage('Serviço removido com sucesso!')
+    })
+    .catch(err => console.log(err))
 
   }
 
@@ -129,10 +153,10 @@ function Project() {
                     <span>Categoria:</span> {project.category.name}
                   </p>
                   <p>
-                    <span>Total do orçamento:</span> {project.budget}
+                    <span>Total do orçamento:</span> R${project.budget}
                   </p>
                   <p>
-                    <span>Total utilizado:</span> {project.cost}
+                    <span>Total utilizado: </span> R${project.cost}
                   </p>
                 </div>
               ) : (
