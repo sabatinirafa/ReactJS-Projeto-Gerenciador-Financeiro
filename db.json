@@ -1,63 +1,28 @@
 {
   "projects": [
     {
-      "name": "Projeto iplementação do React",
-      "budget": "2000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 1
-    },
-    {
-      "name": "Projeto Jira",
-      "budget": "1300",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 928,
-      "services": [
-        {
-          "name": "çljlkjlk",
-          "cost": "458",
-          "description": "lçkçl",
-          "id": "e12046d4-2610-4514-8f25-dec20dd84eb3"
-        },
-        {
-          "name": "çljlkjlk",
-          "cost": "458",
-          "description": "lçkçl",
-          "id": "e12046d4-2610-4514-8f25-dec20dd84eb3"
-        },
-        {
-          "name": "lçkçlkç",
-          "cost": "12",
-          "description": "jkhkj",
-          "id": "cfcedc16-9591-4b2a-b22b-5a8bc4e92ea6"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "name": "Projeto de atualizações",
-      "budget": "1800",
+      "name": "Projeto teste",
+      "budget": "1000",
       "category": {
         "id": "3",
         "name": "Design"
       },
-      "cost": 454,
+      "cost": 300,
       "services": [
         {
-          "name": "jhhk",
-          "cost": "454",
-          "description": "kklçl",
-          "id": "d94aa6ff-5b21-413d-8116-1849569e8a9c"
+          "name": "Criação de layout",
+          "cost": "100",
+          "description": "Criar layout",
+          "id": "2d2bd54f-5f19-42f5-adc8-dc9a6959d47c"
+        },
+        {
+          "name": "Criação do logo",
+          "cost": "200",
+          "description": "Criar logo",
+          "id": "ac7a1a1c-94b5-4cd3-a377-7fc60b3f64dc"
         }
       ],
-      "id": 3
+      "id": 1
     }
   ],
   "categories": [
